@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+    <form action="{{ url_for('updateitem') }}" method="POST">
+        <input type="hidden" name="itemid" value="{{ itemid }}">
+        <input type="text" name="itemname" value="{{ itemname }}"><br>
+        <input type="submit" value="Update">
+    </form>
+{% endblock %}

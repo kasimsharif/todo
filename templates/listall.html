@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<table>
+    {% for eachitem in list%}
+    <tr>
+        <td><a href="showitem/{{ eachitem['id'] }}"> {{ eachitem['name'] }}</a></td>
+        <td>
+            <form action="{{ url_for('deleteitem') }}" method="POST">
+                <input type="hidden" name="listid" value="{{ eachitem['id'] }}">
+                <input type="submit" value="X">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+    <h1><center><a href="{{ url_for('newitem') }}"><button>New Todo list</button></a></center></h1>
+{% endblock %}
