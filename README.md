@@ -4,6 +4,12 @@
 
 This is a Todo List wrote by Python Flask, build on top of SQLITE3
 
+Check the requirements.txt in top level directory.
+
+```
+Flask==0.12
+```
+
 ##Quickstart
 
 ###Clone and install requirements
